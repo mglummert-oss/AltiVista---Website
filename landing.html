@@ -1,1 +1,94 @@
-<!doctype html><html><body>landing placeholder</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AltiVista Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body{margin:0;background:#eef5f9;color:#12243f;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
+    header,footer{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:18px 24px}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
+    .logo{height:56px}
+    #lang-select{border:1px solid #cfd9e3;border-radius:10px;padding:6px 10px;background:#fff}
+    .main-content{max-width:1100px;margin:38px auto;padding:0 18px}
+    .cta-section{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .cta-box-group{text-align:center}
+    .cta-box{height:220px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;background-size:cover;background-position:center;box-shadow:0 10px 24px rgba(17,41,76,.18)}
+    .cta-box a{display:block;width:100%;padding:16px 0;text-align:center;color:#fff;text-decoration:none;font-weight:800;font-size:28px;text-shadow:0 2px 12px rgba(0,0,0,.4);background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%)}
+    .cta-label{margin-top:10px;font-weight:800}
+    .cta-caption{max-width:320px;margin:8px auto 0;line-height:1.35}
+    .about-section{max-width:900px;margin:64px auto 0;text-align:center}
+    .about-section h2{font-size:36px;margin-bottom:12px}
+    footer{flex-direction:column;gap:6px;color:#4b5b75;opacity:.9;margin-top:90px}
+    @media (max-width:900px){.cta-section{grid-template-columns:1fr} .cta-box{height:180px}}
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <img src="images/altivista_logo.png" alt="AltiVista Logo" class="logo" />
+      <div class="nav-right">
+        <select id="lang-select" aria-label="Select language">
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+          <option value="pt">PT</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="it">IT</option>
+          <option value="zh">ZH</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="cta-section">
+        <div class="cta-box-group">
+          <div class="cta-box" style="background-image: url('images/view_lisbon.jpg')">
+            <a href="views.html" data-i18n="cta1_link">Take a View</a>
+          </div>
+          <div class="cta-label" data-i18n="cta1_label">Premium Equipment</div>
+          <div class="cta-caption" data-i18n="cta1_caption">State-of-the-art binoculars and telescopes for crystal-clear views.</div>
+        </div>
+
+        <div class="cta-box-group">
+          <div class="cta-box" style="background-image: url('images/walk_porto.jpg')">
+            <a href="walks.html" data-i18n="cta2_link">My own Guide</a>
+          </div>
+          <div class="cta-label" data-i18n="cta2_label">Immersive Walks</div>
+          <div class="cta-caption" data-i18n="cta2_caption">Interactive routes to explore cultural and natural heritage.</div>
+        </div>
+
+        <div class="cta-box-group">
+          <div class="cta-box" style="background-image: url('images/binocular_shop.jpg')">
+            <a href="shop.html" data-i18n="cta3_link">Go Shopping</a>
+          </div>
+          <div class="cta-label" data-i18n="cta3_label">Quality Shop</div>
+          <div class="cta-caption" data-i18n="cta3_caption">Memories to Take With You – with ♥ for every detail.</div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2 data-i18n="about_title">About the AltiVista Project</h2>
+        <p data-i18n="about_text">
+          AltiVista is a cutting-edge tourism initiative based in Portugal that brings the world closer to you. Our network of panoramic telescopes allows visitors to soak in breathtaking vistas, while our innovative virtual walks guide you through scenic routes with insights into landmarks and local history. Complement your adventures with our carefully curated selection of binoculars, ensuring you never miss a detail.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div data-i18n="footer_copy">© 2025 AltiVista Project. All rights reserved.</div>
+      <div class="madeby" data-i18n="footer_made">Made with ♥ by the AltiVista team.</div>
+    </footer>
+  </div>
+
+  <script>
+    const translations = {
+      en:{cta1_link:\"Take a View\",cta1_label:\"Premium Equipment\",cta1_caption:\"State-of-the-art binoculars and telescopes for crystal-clear views.\",cta2_link:\"My own Guide\",cta2_label:\"Immersive Walks\",cta2_caption:\"Interactive routes to explore cultural and natural heritage.\",cta3_link:\"Go Shopping\",cta3_label:\"Quality Shop\",cta3_caption:\"Memories to Take With You – with ♥ for every detail.\",about_title:\"About the AltiVista Project\",about_text:\"AltiVista is a cutting-edge tourism initiative based in Portugal that brings the world closer to you. Our network of panoramic telescopes allows visitors to soak in breathtaking vistas, while our innovative virtual walks guide you through scenic routes with insights into landmarks and local history. Complement your adventures with our carefully curated selection of binoculars, ensuring you never miss a detail.\",footer_copy:\"© 2025 AltiVista Project. All rights reserved.\",footer_made:\"Made with ♥ by the AltiVista team.\"}
+    };
+    function applyTranslations(lang){document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');el.textContent=translations[lang][key]||el.textContent});document.documentElement.lang=lang;}
+    const select=document.getElementById('lang-select');applyTranslations(select.value);select.addEventListener('change',e=>applyTranslations(e.target.value));
+  </script>
+</body>
+</html>
