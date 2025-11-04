@@ -1,0 +1,1 @@
+// AltiVista core JS – placeholder
