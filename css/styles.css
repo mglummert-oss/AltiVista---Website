@@ -1,1 +1,185 @@
-/* AltiVista main stylesheet – placeholder for styles */
+/* ========================================
+   1) Full-Page-Flex-Layout
+======================================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main.main-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ========================================
+   2) Gemeinsame Styles
+======================================== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f8fb;
+  color: #222;
+  text-align: center;
+}
+
+/* Header */
+header {
+  position: relative;
+  background-color: #fff;
+  padding: 8px 0;
+}
+.logo {
+  height: 90px;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.nav-right {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+.nav-right select {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  appearance: none;
+}
+
+/* Footer */
+footer {
+  background-color: #fff;
+  padding: 20px 0;
+  font-size: 0.85rem;
+}
+.madeby {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* ========================================
+   3) Landing Page Styles
+======================================== */
+/* CTA Boxes */
+.cta-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 20px;
+}
+.cta-box-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+.cta-box {
+  width: 280px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.cta-box:hover {
+  transform: translateY(-5px);
+}
+.cta-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px #000;
+}
+.cta-label {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.cta-caption {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* About Section */
+.about-section {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about-section p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ========================================
+   4) Responsive
+======================================== */
+@media screen and (max-width: 768px) {
+  .cta-box {
+    width: 90%;
+    height: 160px;
+  }
+  .nav-right {
+    position: static;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    position: static;
+    transform: none;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+ .nav-right select {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid #ccc;
+}
+
