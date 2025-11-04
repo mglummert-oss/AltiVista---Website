@@ -33,6 +33,19 @@ header {
   background-color: #fff;
   padding: 8px 0;
 }
+/* Fix for GitHub Pages scroll behavior */
+html, body {
+  height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .logo {
   height: 90px;
   max-width: 300px;
